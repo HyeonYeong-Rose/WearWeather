@@ -1,13 +1,13 @@
 package com.example.wearweather;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+    //@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         // 날씨 가져오기 - 현영
         Weather weather = new Weather();
-        weather.getWeather();
+
+            Weather.getWeather("20201225", "0230", "62", "128");
+
+        }
 
 
     }
-}
