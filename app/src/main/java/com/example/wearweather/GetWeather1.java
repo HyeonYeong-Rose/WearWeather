@@ -1,15 +1,25 @@
 package com.example.wearweather;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+//import javax.xml.parsers.DocumentBuilderFactory;
+//import javax.xml.parsers.DocumentBuilder;
 
 public class GetWeather1 {
 
     //USER_AGENT를 정해줘야 값을 넘겨줄 수 있어요
     private final String USER_AGENT="ROSE";
-
+    Node seoul = null;
 
 
     //HTTP GET request
@@ -40,6 +50,29 @@ public class GetWeather1 {
             response.append(inputLine);
         }
         in.close();
+
+        //데이터 뽑아내기 json parser 웨안뒈? 그럼 xml 알라뷰
+        try {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+
+            FileOutputStream output = new FileOutputStream("./GetWeather");
+            output.write(response.toString().getBytes());
+            output.close();
+
+            Document doc = dBuilder.parse("./GetWeather");
+            doc.getDocumentElement().normalize();
+
+            //객체로 접근 body - items - item
+            Element body = (Element) doc.getElementsByTagName("body").item(0);
+            Element items = (Element) body.getElementsByTagName("items").item(0);
+            Element item = (Element) items.getElementsByTagName("item").item(0);
+            seoul = item.getElementsByTagName("seoul").item(0);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
 
