@@ -16,6 +16,9 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -106,6 +109,21 @@ public class Location{
 
 
                     Log.d("Location", guToXY.get(gu)); // xy 좌표. 현영이에게 넘겨줄 것.
+                    String nxny = guToXY.get(gu);
+
+
+                    Calendar cal = Calendar.getInstance();
+                    SimpleDateFormat dataformat = new SimpleDateFormat("yyyyMMdd");
+                    String toDay = dataformat.format(cal.getTime());
+                    SimpleDateFormat timeformat = new SimpleDateFormat("hhdd");
+                    String time = timeformat.format(cal.getTime());
+                    Log.d("time", time);
+
+
+                    String url = "http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst?serviceKey=BW9vw5Y4RyJwogIhYfUSTSye8SBTWdallELcz9QTMOriq0W0syfhTA7wObN%2BerBY3ghJyEEB4jIq1w9taywEyQ%3D%3D&pageNo=1&numOfRows=10&dataType=XML&base_date="+toDay+"&base_time="+0500+"&nx="+nxny.split(",")[0]+"&ny="+nxny.split(",")[1];
+                    OpenAPI weather = new OpenAPI(url);
+                    weather.execute();
+
                 });
     }
 }
