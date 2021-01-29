@@ -2,6 +2,7 @@ package com.example.wearweather;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -16,6 +17,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 public class OpenAPI extends AsyncTask<Void, Void, String> {
+    String rain;
+    String temperature;
 
         private String url;
 
@@ -78,10 +81,12 @@ public class OpenAPI extends AsyncTask<Void, Void, String> {
                     switch (num) {
                         case "POP":
                             Log.d("OPEN_API","강수 확률!!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
+                            rain = getTagValue("fcstValue", eElement);
+
 
                         case "T3H":
                             Log.d("OPEN_API","3시간 기온!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
-
+                            temperature = getTagValue("fcstValue", eElement);
                             break;
                     }
 
