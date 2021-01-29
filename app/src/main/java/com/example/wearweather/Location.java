@@ -68,6 +68,7 @@ public class Location{
                             Log.d("Location", "동: " + dong); // 보여주기 위한 동
                             gu = addr.get(0).getAddressLine(0).split(" ")[2];
                             Log.d("Location", "구: " + gu);
+                            MainActivity.now_dong = dong;
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -125,7 +126,6 @@ public class Location{
                     int hour=Integer.valueOf(hh);
                     int minute=Integer.valueOf(mm);
 
-<<<<<<< HEAD
                     //원래 시간 출력
                     Log.d("Location" , "current time : "+ String.format("%02d", hour)+String.format("%02d", minute));
 
@@ -181,73 +181,11 @@ public class Location{
                             Log.d("Location","Hour : " + String.format("%02d", hour));
                             break;
                     }
-=======
-                            //원래 시간 출력
-                            Log.d("TIME: " , "current time : "+ String.format("%02d", hour)+String.format("%02d", minute));
-
-                            //시간 base time 형식에 맞게 변환
-                            //hour
-                            switch(hour) {
-
-                                case 3:
-                                case 4:
-                                    hour = 2;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 6:
-                                case 7:
-                                    hour = 5;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 9:
-                                case 10:
-                                    hour = 8;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 12:
-                                case 13:
-                                    hour = 11;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 15:
-                                case 16:
-                                    hour = 14;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 18:
-                                case 19:
-                                    hour = 17;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 21:
-                                case 22:
-                                    hour = 20;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-
-                                case 24:
-                                case 1:
-                                    hour = 23;
-                                    Log.d("TIME : ","Hour : " + String.format("%02d", hour));
-                                    break;
-                            }
->>>>>>> 8091cd950a50ca0bbbd44355906ba9a310f87746
-
                         //minute
                     minute=0;
 
-<<<<<<< HEAD
                     String basetime = String.format("%02d", hour) + String.format("%02d", minute);;
-=======
-                            String basetime = String.format("%02d", hour) + String.format("%02d", minute);;
-                            Log.d("TIME :  "  , "basetime~! "+basetime);
->>>>>>> 8091cd950a50ca0bbbd44355906ba9a310f87746
+                    Log.d("TIME :  "  , "basetime~! "+basetime);
 
                     String url = "http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst?serviceKey=BW9vw5Y4RyJwogIhYfUSTSye8SBTWdallELcz9QTMOriq0W0syfhTA7wObN%2BerBY3ghJyEEB4jIq1w9taywEyQ%3D%3D&pageNo=1&numOfRows=10&dataType=XML&base_date="+toDay+"&base_time="+basetime+"&nx="+nxny.split(",")[0]+"&ny="+nxny.split(",")[1];
                     OpenAPI weather = new OpenAPI(url);

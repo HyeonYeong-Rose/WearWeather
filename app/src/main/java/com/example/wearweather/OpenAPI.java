@@ -82,10 +82,12 @@ public class OpenAPI extends AsyncTask<Void, Void, String> {
                         case "POP":
                             Log.d("OPEN_API","강수 확률!!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
                             rain = getTagValue("fcstValue", eElement);
+                            MainActivity.now_rain = rain;
                             break;
                         case "T3H":
                             Log.d("OPEN_API","3시간 기온!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
                             temperature = getTagValue("fcstValue", eElement);
+                            MainActivity.now_temp = temp;
                             break;
                     }
 
