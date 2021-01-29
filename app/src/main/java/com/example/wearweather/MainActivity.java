@@ -1,11 +1,8 @@
 package com.example.wearweather;
 
 import android.os.Bundle;
-import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.gms.tasks.OnSuccessListener;
-import java.util.logging.Handler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         // 위치 가져오기 - 수빈
         location = new Location(this);
         location.getLoc(); // latlong[0] 은 latitude, latlong[1]은 longitude
+
+
 
     }
 
