@@ -68,7 +68,7 @@ public class OpenAPI extends AsyncTask<Void, Void, String> {
                     Log.d("OPEN_API","X 좌표  : " + getTagValue("nx", eElement));
                     Log.d("OPEN_API","Y 좌표  : " + getTagValue("ny", eElement));
                     Log.d("OPEN_API","카테고리  : " + getTagValue("category", eElement));
-                    Log.d("OPEN_API","값  : " + getTagValue("fcstValue", eElement));
+
 
 
 
@@ -78,7 +78,7 @@ public class OpenAPI extends AsyncTask<Void, Void, String> {
                     switch (num) {
                         case "POP":
                             Log.d("OPEN_API","강수 확률!!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
-
+                            break;
                         case "T3H":
                             Log.d("OPEN_API","3시간 기온!!!!!!!!!!!  : " + getTagValue("fcstValue", eElement));
 
