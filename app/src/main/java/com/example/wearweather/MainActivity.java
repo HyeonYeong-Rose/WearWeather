@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     tv_dong.setText(now_dong);
                     tv_rain.setText(now_rain);
                     tv_temp.setText("" + now_temp);
-                    // 이미지 설정 알고리즘~!
+                    // 이미지 설정 알고리즘~
                     if (now_temp >= 8) {
                         img_1.setImageResource(R.drawable.sneakers);
                         img_2.setImageResource(R.drawable.hoodies);
