@@ -25,22 +25,23 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="오늘의 "
-                android:textSize="16sp" />
+                android:text="지금의 "
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_dong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="XX동"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" 날씨는"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,20 +54,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="현재기온 "
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="00"
-                android:textSize="20sp" />
+                android:textColor="@color/black"
+                android:textSize="22sp" />
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="도"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,20 +81,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강수확률 "
-                android:textSize="16sp" />
+                android:textSize="18sp" />
             <TextView
                 android:id="@+id/tv_rain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00"
-                android:textSize="20sp" />
+                android:textColor="@color/black"
+                android:textSize="22sp" />
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="%"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/img_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            tools:srcCompat="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/img_3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            tools:srcCompat="@tools:sample/avatars" />
 
     </LinearLayout>
 
