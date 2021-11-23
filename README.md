@@ -1,6 +1,6 @@
 # WearWeather
 
-2020 서울과학기술대학교 ITM전공 JAVA 경진대회 (은상🥈)[https://drive.google.com/file/d/115j7tX0OxDk6kJvDDigvr0UTnCF5bjkf/view] 수상 모바일 앱 <br>
+2020 서울과학기술대학교 ITM전공 JAVA 경진대회 [은상🥈](https://drive.google.com/file/d/115j7tX0OxDk6kJvDDigvr0UTnCF5bjkf/view) 수상 모바일 앱 <br>
 🥈 silver winning mobile application in JAVA competition, ITM, Seoultech <br><br>
 
 COVID-19로 인해 외출하는 빈도가 줄어들면서, 날씨 어플을 통해 온도를 알더라도 그에 맞는 복장을 예측하기 어려워짐.
